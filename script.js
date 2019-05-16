@@ -16,7 +16,10 @@ window.onload = function() {
             console.log(json);
 
             let results ="";
-            results += '<img src='+ json.collection.items[0].links[0].href +'>';
+            //for (let i=0; i < json.collection.length; i++) {
+                results += '<img src='+ json.collection.items[0].links[0].href +'>';
+                results += json.collection.items[0].data[0].description;
+            //}
             // results+= '<h2>Current Weather in ' + json.name +"</h2>";
             // for (let i=0; i < json.weather.length; i++) {
             //     results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
